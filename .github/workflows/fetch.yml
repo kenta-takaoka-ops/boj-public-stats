@@ -1,0 +1,25 @@
+name: fetch-public-stats
+on:
+  schedule:
+    - cron: '23 0 * * 1-5'    # 平日 9:23 JST（日銀の掲載は8:50ごろ）
+    - cron: '23 9 * * 1-5'    # 平日 18:23 JST（財務省の金利は夕方）
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: { group: fetch, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python fetch.py
+      - name: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
