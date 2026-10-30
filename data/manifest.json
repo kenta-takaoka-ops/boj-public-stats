@@ -1,0 +1,33 @@
+{
+ "fetched_utc": "2026-10-30T11:26:47Z",
+ "files": {
+  "boj/BS01.json": "6b51344bc4a24513",
+  "boj/BS02.json": "19ad9992223133d1",
+  "boj/FM01.json": "ca835d14fb15d977",
+  "boj/FM02.json": "564148021681a167",
+  "boj/FM08.json": "e190314ee5069575",
+  "boj/FM09.json": "07d16a0381ab2f1e",
+  "boj/IR01.json": "f540f55dbf6cb25b",
+  "boj/IR02.json": "4bb2c65e4cf3aba0",
+  "boj/IR03.json": "5f72159a56846ae1",
+  "boj/IR04.json": "de34802d3ced5c09",
+  "boj/LA01.json": "702548543cb90b45",
+  "boj/LA04.json": "af85ce73d00cd30f",
+  "boj/LA05.json": "313614d30a7ae749",
+  "boj/MD01.json": "1ac2f62573aa7a2a",
+  "boj/MD02.json": "acdd666fadb84d7e",
+  "boj/MD06.json": "9a13d3fe4fde21ff",
+  "boj/MD07.json": "da81cd3ff8b5790d",
+  "boj/MD08.json": "ddbfd83911c3eaea",
+  "boj/MD10.json": "e04cc40e4741c868",
+  "boj/MD11.json": "70f0515eb589d281",
+  "boj/MD12.json": "761a6d995fbf7618",
+  "boj/MD13.json": "fe31e04a0a4e0276",
+  "boj/MD14.json": "4a4152089cba9770",
+  "boj/OB02.json": "482eab7b426054bc",
+  "mof/jgbcm_all.csv": "3ed93b158ca7abec",
+  "mof/jgbcm.csv": "f3ce7805c66671b9",
+  "boj/tkohyos.xlsx": "7ec5b4bb231236b9"
+ },
+ "errors": []
+}
