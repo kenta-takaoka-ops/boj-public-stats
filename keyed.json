@@ -1,0 +1,4 @@
+{
+ "estat/0000010101.json": "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData?appId={ESTAT_APP_ID}&statsDataId=0000010101&cdCat01=A1101,A1302,A1303&limit=100000&metaGetFlg=N&cntGetFlg=N&sectionHeaderFlg=2",
+ "estat/0000010103.json": "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData?appId={ESTAT_APP_ID}&statsDataId=0000010103&cdCat01=C1121,C112210,C210821,C220821&limit=100000&metaGetFlg=N&cntGetFlg=N&sectionHeaderFlg=2"
+}

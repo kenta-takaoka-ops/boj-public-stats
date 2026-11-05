@@ -1,0 +1,66 @@
+{
+ "worldbank/FB.AST.NPER.ZS.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FB.AST.NPER.ZS?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FB.BNK.CAPA.ZS.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FB.BNK.CAPA.ZS?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FS.AST.PRVT.GD.ZS.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FS.AST.PRVT.GD.ZS?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FD.AST.PRVT.GD.ZS.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FD.AST.PRVT.GD.ZS?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FM.LBL.BMNY.GD.ZS.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FM.LBL.BMNY.GD.ZS?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FR.INR.LNDP.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FR.INR.LNDP?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FR.INR.DPST.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FR.INR.DPST?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FR.INR.LEND.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FR.INR.LEND?format=json&date=1960:2035&per_page=20000",
+ "worldbank/FB.CBK.BRCH.P5.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;KOR;CHN;EMU/indicator/FB.CBK.BRCH.P5?format=json&date=1960:2035&per_page=20000",
+ "worldbank/NY.GDP.MKTP.CN.json": "https://api.worldbank.org/v2/country/JPN;USA;GBR;DEU;FRA;ITA;ESP;GRC;KOR;CHN;EMU/indicator/NY.GDP.MKTP.CN?format=json&date=1960:2035&per_page=20000",
+ "eurostat/nasq_10_nf_tr_B9.json": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_nf_tr?format=JSON&lang=EN&unit=CP_MEUR&s_adj=NSA&na_item=B9&sector=S11&sector=S12&sector=S13&sector=S14_S15&sector=S2",
+ "eurostat/namq_10_gdp.json": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_gdp?format=JSON&lang=EN&unit=CP_MEUR&s_adj=NSA&na_item=B1GQ",
+ "eurostat/nasq_10_f_bs_BF90.json": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_bs?format=JSON&lang=EN&unit=MIO_EUR&na_item=BF90&sector=S11&sector=S12&sector=S13&sector=S14_S15&sector=S2",
+ "eurostat/gov_10dd_edpt1.json": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&unit=PC_GDP&unit=MIO_EUR&sector=S13&na_item=GD&na_item=B9&na_item=D41PAY&geo=EA21&geo=EA20&geo=DE&geo=FR&geo=IT&geo=ES&geo=EL",
+ "eurostat/nama_10_gdp.json": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&unit=CP_MEUR&na_item=B1GQ&geo=EA21&geo=EA20&geo=DE&geo=FR&geo=IT&geo=ES&geo=EL",
+ "imf/GGXWDG_NGDP.json": "https://www.imf.org/external/datamapper/api/v1/GGXWDG_NGDP/JPN/USA/DEU/FRA/ITA/ESP/GRC/GBR",
+ "imf/GGXCNL_NGDP.json": "https://www.imf.org/external/datamapper/api/v1/GGXCNL_NGDP/JPN/USA/DEU/FRA/ITA/ESP/GRC/GBR",
+ "imf/ie.json": "https://www.imf.org/external/datamapper/api/v1/ie/JPN/USA/DEU/FRA/ITA/ESP/GRC/GBR",
+ "imf/NGDP_RPCH.json": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/JPN/USA/DEU/FRA/ITA/ESP/GRC/GBR",
+ "imf/PCPIPCH.json": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/JPN/USA/DEU/FRA/ITA/ESP/GRC/GBR",
+ "bis/credit_gap_all.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CREDIT_GAP/1.0/Q..P.A.?format=csv",
+ "bis/dsr_all.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_DSR/1.0/Q..P+H+N?format=csv",
+ "bis/spp.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_SPP/1.0/Q..R.628?format=csv",
+ "bis/tc.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_TC/2.0/Q..P+H+N.A+B.M.770+XDC.A?format=csv",
+ "bis/ccyb.xlsx": {
+  "page": "https://www.bis.org/committees/bcbs/ccyb",
+  "match": "\\.xlsx?($|\\?)"
+ },
+ "imf/indicators.json": "https://www.imf.org/external/datamapper/api/v1/indicators",
+ "imf/GGXWDG_G01_GDP_PT.json": "https://www.imf.org/external/datamapper/api/v1/GGXWDG_G01_GDP_PT",
+ "imf/GGXWDN_G01_GDP_PT.json": "https://www.imf.org/external/datamapper/api/v1/GGXWDN_G01_GDP_PT",
+ "imf/GGXCNL_G01_GDP_PT.json": "https://www.imf.org/external/datamapper/api/v1/GGXCNL_G01_GDP_PT",
+ "imf/GGXONLB_G01_GDP_PT.json": "https://www.imf.org/external/datamapper/api/v1/GGXONLB_G01_GDP_PT",
+ "oecd/qsa_b9.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC1@DF_QSA/Q...S1+S11+S12+S13+S1M+S14_S15+S2.S1..B9+B1GQ...XDC....?startPeriod=1995-Q1&format=csvfile",
+ "oecd/fbs_stock.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC20@DF_T710R_Q/Q.N..W.S1+S11+S12+S13+S1M+S2.S1.C..LE.F..XDC......?startPeriod=1995-Q1&format=csvfile",
+ "oecd/fbs_stock_nc.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC20@DF_T720R_Q/Q.N..W.S1+S11+S12+S13+S1M+S2.S1.N..LE.F..XDC......?startPeriod=1995-Q1&format=csvfile",
+ "oecd/fa_flow_nc.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NASEC20@DF_T620R_Q/Q.N..W.S1+S11+S12+S13+S1M+S2.S1.N..F.F..XDC......?startPeriod=1995-Q1&format=csvfile",
+ "oecd/qna_gdp.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA/Q...S1.S1.B1GQ._Z._Z._Z.XDC.V..T0102?startPeriod=1995-Q1&format=csvfile",
+ "oecd/qna_gdp_a.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA/A.N..S1.S1.B1GQ._Z._Z._Z.XDC.V..T0102?startPeriod=1995&format=csvfile",
+ "oecd/irlt.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK/JPN+USA+EA20+DEU+FRA+ITA+ESP+GRC+GBR.M.IRLT.PA.....?startPeriod=1990-01&format=csvfile",
+ "ecb/ilm_total_assets.csv": "https://data-api.ecb.europa.eu/service/data/ILM/W.U2.C.T000000.Z5.Z01?format=csvdata&startPeriod=1999-01-01",
+ "ecb/dfr.csv": "https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?format=csvdata&startPeriod=1999-01-01",
+ "bis/cbta.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBTA/1.0/M.US+XM+JP..?format=csv",
+ "bis/cbpol.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/M.US+XM+JP?format=csv",
+ "fed/h41_table5.csv": {
+  "fed": "H41",
+  "label": "H.4.1 Statistical Release - Table 5 [",
+  "lastobs": "60"
+ },
+ "fed/h15_monthly.csv": {
+  "fed": "H15",
+  "label": "Monthly Averages [",
+  "lastobs": ""
+ },
+ "fed/h8_acb_sa_monthly.csv": {
+  "fed": "H8",
+  "label": "All Commercial Banks, SA (Monthly) [",
+  "lastobs": ""
+ },
+ "fed/sloos.csv": {
+  "fed": "SLOOS",
+  "label": "All chart data [",
+  "lastobs": ""
+ }
+}

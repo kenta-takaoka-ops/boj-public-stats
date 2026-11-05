@@ -1,0 +1,7 @@
+{
+ "mof/jgb_historical_data.xls": "https://www.mof.go.jp/jgbs/reference/appendix/jgb_historical_data.xls",
+ "mof/ryudousei_historical_data.xls": "https://www.mof.go.jp/jgbs/reference/appendix/ryudousei_historical_data.xls",
+ "worldbank/NY.GDP.MKTP.CN_JPN.json": "https://api.worldbank.org/v2/country/JPN/indicator/NY.GDP.MKTP.CN?format=json&per_page=200",
+ "bis/credit_gap.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CREDIT_GAP/1.0/Q.JP+US+XM+CN+GB+DE+FR+IT+ES+KR.P.A.?format=csv",
+ "bis/dsr.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_DSR/1.0/Q.JP+US+CN+GB+DE+FR+IT+ES+KR.P+H+N?format=csv"
+}
