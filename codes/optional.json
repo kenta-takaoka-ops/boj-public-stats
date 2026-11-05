@@ -39,13 +39,13 @@
  "oecd/qna_gdp.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA/Q...S1.S1.B1GQ._Z._Z._Z.XDC.V..T0102?startPeriod=1995-Q1&format=csvfile",
  "oecd/qna_gdp_a.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA/A.N..S1.S1.B1GQ._Z._Z._Z.XDC.V..T0102?startPeriod=1995&format=csvfile",
  "oecd/irlt.csv": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK/JPN+USA+EA20+DEU+FRA+ITA+ESP+GRC+GBR.M.IRLT.PA.....?startPeriod=1990-01&format=csvfile",
- "ecb/ilm_total_assets.csv": "https://data-api.ecb.europa.eu/service/data/ILM/W.U2.C.T000000.Z5.Z01?format=csvdata&startPeriod=1999-01-01",
- "ecb/dfr.csv": "https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?format=csvdata&startPeriod=1999-01-01",
+ "ecb/ilm_total_assets.csv": "https://data-api.ecb.europa.eu/service/data/ILM/W.U2.C.T000000.Z5.Z01?format=csvdata&detail=dataonly&startPeriod=1999-01-01",
+ "ecb/dfr.csv": "https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?format=csvdata&detail=dataonly&startPeriod=1999-01-01",
  "bis/cbta.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBTA/1.0/M.US+XM+JP..?format=csv",
  "bis/cbpol.csv": "https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/M.US+XM+JP?format=csv",
  "fed/h41_table5.csv": {
   "fed": "H41",
-  "label": "H.4.1 Statistical Release - Table 5 [",
+  "label": "Table 5 [",
   "lastobs": "60"
  },
  "fed/h15_monthly.csv": {
