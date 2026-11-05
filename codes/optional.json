@@ -62,5 +62,40 @@
   "fed": "SLOOS",
   "label": "All chart data [",
   "lastobs": ""
+ },
+ "fed/z1_s12iq.csv": {
+  "fed": "Z1",
+  "label": "S1.2.i.q (Q)",
+  "lastobs": ""
+ },
+ "fed/z1_s11iq.csv": {
+  "fed": "Z1",
+  "label": "S1.1.i.q (Q)",
+  "lastobs": ""
+ },
+ "fed/z1_s1m_s.csv": {
+  "fed": "Z1",
+  "label": "S1M.s (Q)",
+  "lastobs": ""
+ },
+ "fed/z1_s11_s.csv": {
+  "fed": "Z1",
+  "label": "S11.s (Q)",
+  "lastobs": ""
+ },
+ "fed/z1_s12_s.csv": {
+  "fed": "Z1",
+  "label": "S12.s (Q)",
+  "lastobs": ""
+ },
+ "fed/z1_s13_s.csv": {
+  "fed": "Z1",
+  "label": "S13.s (Q)",
+  "lastobs": ""
+ },
+ "fed/z1_s2_s.csv": {
+  "fed": "Z1",
+  "label": "S2.s (Q)",
+  "lastobs": ""
  }
 }
