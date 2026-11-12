@@ -1,0 +1,429 @@
+{
+ "IR02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "預金種類別店頭表示金利"
+ },
+ "IR03": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "定期預金の預入期間別平均金利"
+ },
+ "IR04": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "貸出約定平均金利の推移"
+ },
+ "FM02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "コールレート（月次）"
+ },
+ "FM03": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "FM04": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "FM05": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "FM08": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "FM09": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "PS01": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "PS02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "MD01": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "マネタリーベース"
+ },
+ "MD02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "マネーストック（速報）"
+ },
+ "MD03": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "MD05": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "MD06": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "日銀当座預金増減要因と金融調節（実績）"
+ },
+ "MD07": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "準備預金額／末残高"
+ },
+ "MD08": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "業態別の日銀当座預金残高"
+ },
+ "MD09": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "MD11": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "預金・現金・貸出金"
+ },
+ "MD12": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "都道府県別預金・現金・貸出金"
+ },
+ "MD13": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "貸出・預金動向（速報）"
+ },
+ "MD14": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "定期預金の残高および新規受入高"
+ },
+ "LA02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "LA03": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "LA04": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "コミットメントライン"
+ },
+ "BS01": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "営業毎旬報告"
+ },
+ "BS02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "国内銀行の資産・負債等（銀行勘定）"
+ },
+ "OB01": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3
+ },
+ "OB02": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "MONTHLY",
+    "QUARTERLY",
+    "ANNUAL",
+    "SEMIANNUAL"
+   ]
+  },
+  "days": 3,
+  "release": "オペレーション（月次公表分）"
+ },
+ "MD10": {
+  "rule": {
+   "live": true
+  },
+  "days": 7,
+  "release": "預金者別預金"
+ },
+ "LA01": {
+  "rule": {
+   "live": true,
+   "frequencies": [
+    "QUARTERLY",
+    "MONTHLY"
+   ]
+  },
+  "days": 7,
+  "release": "貸出先別貸出金"
+ },
+ "LA05": {
+  "rule": {
+   "live": true
+  },
+  "days": 7,
+  "release": "主要銀行貸出動向アンケート"
+ },
+ "CO": {
+  "rule": {
+   "live": true,
+   "prefix": [
+    "TK99F5"
+   ],
+   "frequency": "QUARTERLY",
+   "not_name": "有効回答"
+  },
+  "days": 7,
+  "release": "短観"
+ },
+ "DER": {
+  "rule": {
+   "live": true
+  },
+  "days": 28
+ },
+ "BIS": {
+  "rule": {
+   "live": true,
+   "name": "(合計|クロスボーダー合計|全世界|米国|中国|英国|ケイマン諸島|香港|シンガポール|ドイツ|フランス|オーストラリア|タイ|インドネシア|インド|ベトナム|韓国|台湾)$"
+  },
+  "days": 28
+ }
+}
