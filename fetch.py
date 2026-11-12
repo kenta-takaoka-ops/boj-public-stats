@@ -17,6 +17,9 @@ Sources (government statistics only; index providers' files are NOT stored here 
     A value {"fed": REL, "label": TEXT, "lastobs": N} fetches a preformatted package of the Federal Reserve Board
     Data Download Program (csv; lastobs "" = all observations).
     Data are taken from the original publishers only (no FRED / third-party redistribution services).
+  - codes/scout_boj.json: every banking-related BOJ database (all live series, full history) for a story finder that
+    compares each new figure with its whole history. Saved as data/scout/DB.json.gz on release days (BOJ calendar)
+    or every few days; failures are warnings.
   - codes/keyed.json: sources that need an API key (e-Stat, EDINET). Keys come ONLY from GitHub Actions secrets
     (environment variables ESTAT_APP_ID / EDINET_API_KEY). They are never written to data/, the manifest or the
     log: error messages are redacted, and a response that contains the key is not saved.
@@ -84,16 +87,36 @@ def save(rel, blob):
         open(p, 'wb').write(blob); LOG.append(f'updated {rel} ({len(blob):,} bytes)')
     return hashlib.sha256(blob).hexdigest()[:16]
 
-def select_by_rule(db, rule):
-    """Pick series codes from the BOJ metadata API. rule: {"all": true} or
-    {"prefix": [...], "sectors": [...], "frequency": "QUARTERLY"} (sectors = characters 9-11 of FF codes)."""
-    j = json.loads(get(f'https://www.stat-search.boj.or.jp/api/v1/getMetadata?format=json&lang=jp&db={db}', timeout=180))
-    rs = [x for x in (j.get('RESULTSET') or []) if x.get('SERIES_CODE')]
+_META = {}
+def boj_meta(db):
+    """BOJ metadata API -> (title of the database, rows with a series code). Cached per run."""
+    if db not in _META:
+        j = json.loads(get(f'https://www.stat-search.boj.or.jp/api/v1/getMetadata?format=json&lang=jp&db={db}', timeout=180))
+        allr = j.get('RESULTSET') or []
+        title = next((x.get('NAME_OF_TIME_SERIES_J', '') for x in allr if not x.get('SERIES_CODE')), db)
+        _META[db] = (title, [x for x in allr if x.get('SERIES_CODE')])
+    return _META[db]
+
+def select_rows(db, rule):
+    """Pick series from the BOJ metadata API. rule keys (all optional):
+    all: true / prefix: [...] / sectors: [...] (characters 9-11 of FF codes) / frequency: "QUARTERLY"
+    frequencies: [...] (any of) / live: true (series still updated: ends in the last two years)
+    name: regex that the Japanese series name must match / not_name: regex it must not match"""
+    rs = boj_meta(db)[1]
     if rule.get('frequency'): rs = [x for x in rs if x.get('FREQUENCY') == rule['frequency']]
+    if rule.get('frequencies'): rs = [x for x in rs if any((x.get('FREQUENCY') or '').startswith(f) for f in rule['frequencies'])]
     if rule.get('prefix'): rs = [x for x in rs if any(x['SERIES_CODE'].startswith(p) for p in rule['prefix'])]
     if rule.get('sectors'):
         sec = set(rule['sectors']); rs = [x for x in rs if x['SERIES_CODE'][8:11] in sec]
-    return sorted(x['SERIES_CODE'] for x in rs)
+    if rule.get('live'):
+        y = str(datetime.date.today().year - 2)
+        rs = [x for x in rs if str(x.get('END_OF_THE_TIME_SERIES') or '') >= y]
+    if rule.get('name'): rs = [x for x in rs if re.search(rule['name'], x.get('NAME_OF_TIME_SERIES_J') or '')]
+    if rule.get('not_name'): rs = [x for x in rs if not re.search(rule['not_name'], x.get('NAME_OF_TIME_SERIES_J') or '')]
+    return sorted(rs, key=lambda x: x['SERIES_CODE'])
+
+def select_by_rule(db, rule):
+    return [x['SERIES_CODE'] for x in select_rows(db, rule)]
 
 def boj(db, freq, codes, start):
     """BOJ getDataCode API, <=50 codes per request. start=None or daily -> no startDate (full history)."""
@@ -161,10 +184,10 @@ def main():
         except ValueError: prev = {}
     now = datetime.datetime.now(datetime.timezone.utc)
     man = {'fetched_utc': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'files': {}, 'at': {}, 'errors': [], 'warnings': [], 'skipped': []}
-    def due(rel):
+    def due(rel, days=WEEKLY_DAYS):
         t = (prev.get('at') or {}).get(rel)
         if not t or rel not in (prev.get('files') or {}) or not os.path.exists(os.path.join(DATA, rel)): return True
-        return (now - datetime.datetime.fromisoformat(t.replace('Z', '+00:00'))).days >= WEEKLY_DAYS
+        return (now - datetime.datetime.fromisoformat(t.replace('Z', '+00:00'))).days >= days
     def keep(rel):   # not fetched this time: carry the previous entry so the manifest still lists the file
         man['files'][rel] = prev['files'][rel]; man['at'][rel] = prev['at'][rel]; man['skipped'].append(rel)
     def put(rel, blob):
@@ -203,6 +226,33 @@ def main():
         if not due(rel): keep(rel); continue
         try:
             put(rel, get_source(src))
+        except Exception as e:
+            man['warnings'].append(f'{rel}: {e}'[:300])
+            if rel in (prev.get('files') or {}): keep(rel)
+    # banking-wide BOJ databases for the story finder (codes/scout_boj.json): full history, gzip-compressed,
+    # fetched on the statistic's release day (BOJ calendar) and otherwise every "days" days (default 7).
+    # Failures are warnings. A time budget keeps the run short; databases left over are fetched next run.
+    sj = os.path.join(ROOT, 'codes', 'scout_boj.json')
+    t0 = time.time(); budget = 15 * 60
+    import gzip
+    for db, v in (json.load(open(sj)).items() if os.path.exists(sj) else []):
+        rel = f'scout/{db}.json.gz'
+        rd = set()
+        for nm in ([v['release']] if isinstance(v.get('release'), str) else v.get('release') or []): rd |= release_dates(nm)
+        on_release = tday in rd or (jst_today() - datetime.timedelta(days=1)).isoformat() in rd
+        if not on_release and not due(rel, v.get('days', 7)):
+            keep(rel); continue
+        if time.time() - t0 > budget:
+            man['warnings'].append(f'{rel}: postponed (time budget)')
+            if rel in (prev.get('files') or {}): keep(rel)
+            continue
+        try:
+            title, _ = boj_meta(db)
+            rows = select_rows(db, v.get('rule') or {'all': True, 'live': True})
+            meta = {x['SERIES_CODE']: [x.get('NAME_OF_TIME_SERIES_J', ''), x.get('UNIT_J', ''), x.get('FREQUENCY', '')] for x in rows}
+            rs = boj(db, 'M', list(meta), None)
+            blob = json.dumps({'db': db, 'title': title, 'meta': meta, 'data': rs}, ensure_ascii=False, separators=(',', ':')).encode()
+            put(rel, gzip.compress(blob, mtime=0))
         except Exception as e:
             man['warnings'].append(f'{rel}: {e}'[:300])
             if rel in (prev.get('files') or {}): keep(rel)

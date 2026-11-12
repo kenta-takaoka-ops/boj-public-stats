@@ -8,6 +8,7 @@ APIキーはこのリポジトリのどのファイルにも書きません。e-
 - `codes/boj.json` `codes/boj_derived.json` … 日本銀行 時系列統計データ検索サイトの系列コード
 - `codes/extra.json` … 追加で取る公開ファイル（失敗したら manifest の errors）
 - `codes/optional.json` … 海外の公的統計など（世界銀行・IMF・Eurostat・OECD・BIS・ECB・FRB）。週1回取得し、失敗しても warnings にとどめる
+- `codes/scout_boj.json` … 記事ネタの自動検知用に、銀行業界に関わる日銀の統計（預金・貸出・金利・マネー・日銀当座預金・銀行の資産負債・決済・短観の金融機関・BIS国際与信など）の現存系列を全期間取る設定。`data/scout/*.json.gz` に保存。公表日（日銀の公表予定表）か数日おきに取得し、失敗しても warnings にとどめる
 - `codes/keyed.json` … キーが必要な取得先。URL中の `{ESTAT_APP_ID}` などを Secrets の値に置き換えて取得する
 - `data/manifest.json` … 最終取得時刻、エラー、警告
 
@@ -17,7 +18,7 @@ APIキーはこのリポジトリのどのファイルにも書きません。e-
 
 | フォルダ | 作成元 | 主な取得先 |
 |---|---|---|
-| `boj/` | 日本銀行 | 時系列統計データ検索サイト API、公表予定（tkohyos.xlsx） |
+| `boj/` `scout/` | 日本銀行 | 時系列統計データ検索サイト API、公表予定（tkohyos.xlsx） |
 | `mof/` | 財務省 | 国債金利情報、国債の入札結果 |
 | `estat/` | 総務省統計局ほか | 政府統計の総合窓口（e-Stat）API |
 | `worldbank/` | World Bank | World Development Indicators API（CC BY 4.0） |
