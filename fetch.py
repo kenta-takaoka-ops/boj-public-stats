@@ -250,7 +250,9 @@ def main():
             title, _ = boj_meta(db)
             rows = select_rows(db, v.get('rule') or {'all': True, 'live': True})
             meta = {x['SERIES_CODE']: [x.get('NAME_OF_TIME_SERIES_J', ''), x.get('UNIT_J', ''), x.get('FREQUENCY', '')] for x in rows}
-            rs = boj(db, 'M', list(meta), None)
+            rs = []
+            for fq in sorted({m[2] for m in meta.values()}):   # the API takes one frequency per request
+                rs += boj(db, 'M', [c for c, m in meta.items() if m[2] == fq], None)
             blob = json.dumps({'db': db, 'title': title, 'meta': meta, 'data': rs}, ensure_ascii=False, separators=(',', ':')).encode()
             put(rel, gzip.compress(blob, mtime=0))
         except Exception as e:
